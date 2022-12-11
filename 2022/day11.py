@@ -1,7 +1,7 @@
 """
 #part 1
 from collections import deque
-with open("2022/day11input.txt", "r") as f:
+with open("day11input.txt", "r") as f:
     data = list(map(lambda x:x.split("\n")[0].strip(), f.readlines()))
 
 class Monkey:
@@ -72,7 +72,7 @@ print(max1*max2)
 #part 2
 
 from collections import deque
-with open("2022/day11input.txt", "r") as f:
+with open("day11input.txt", "r") as f:
     data = list(map(lambda x:x.split("\n")[0].strip(), f.readlines()))
 
 class Monkey:
