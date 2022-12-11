@@ -25,7 +25,7 @@ class Monkey:
                 current *= toChange
             else:
                 current += toChange
-            #current //= 3
+            current //= 3
             if current%self.divisor == 0:
                 monkeys[self.trueDest].items.append(current)
             else:
@@ -52,12 +52,9 @@ while index < len(data):
     monkeys[-1].falseDest = int(data[index].split()[-1])
     index += 2
 
-for _ in range(0, 2):
+for _ in range(0, 20):
     for m in monkeys:
         m.inspect(monkeys)
-
-for m in monkeys:
-    m.inspect(monkeys)
 
 max1 = 0
 max2 = 0
