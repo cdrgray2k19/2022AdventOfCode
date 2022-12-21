@@ -22,8 +22,6 @@ for cube in data:
     for dx, dy, dz in [(0,0,-1),(0,0,1),(1,0,0),(-1,0,0),(0,1,0),(0,-1,0)]:
         if (x+dx, y+dy, z+dz) in data:
             sides -= 1
-    if cube == (2, 2, 5):
-        print(sides)
     total += sides
 print("part 1:", total)
 
