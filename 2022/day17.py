@@ -22,6 +22,8 @@ added = 0
 while True:
     if rockN == 1000000000000:
         break
+    if rockN == 2022:
+        print(tallest+1+added)
     rock = rocks[rockN%len(rocks)]
     x = 2
     y = tallest + 4
@@ -53,7 +55,7 @@ while True:
         tallest = max(tallest, y+dy)
     
     newPattern = pattern(tallest)
-    if (newPattern, jetN%len(jets), frozenset(rocks[rockN%len(rocks)])) in seen:
+    if (newPattern, jetN%len(jets), frozenset(rocks[rockN%len(rocks)])) in seen and rockN > 2022:
         oldT, oldRockN = seen[(newPattern, jetN%len(jets), frozenset(rocks[rockN%len(rocks)]))]
         dif = tallest-oldT
         rockDif = rockN-oldRockN
